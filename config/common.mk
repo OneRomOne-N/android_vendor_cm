@@ -247,7 +247,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.version=$(NUCLEAR_VERSION) \
   ro.cm.releasetype=$(ROM_VERSION_STATUS) \
   ro.modversion=$(NUCLEAR_VERSION) \
-  ro.cmlegal.url=https://lineageos.org/legal
+  ro.cmlegal.url=https://lineageos.org/legal \
+  ro.nuclear.version=$(NUCLEAR_VERSION)
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
   vendor/cm/build/target/product/security/lineage
