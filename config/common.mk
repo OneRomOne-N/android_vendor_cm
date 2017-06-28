@@ -236,9 +236,22 @@ endif
 
 DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
+# Set this in any .mk in the device tree
+# For maintainers "NUCLEAR_BUILDTYPE := OFFICIAL"
+ifdef NUCLEAR_BUILDTYPE
+    ifeq ($(NUCLEAR_BUILDTYPE), OFFICIAL)
+        NUCLEAR_VERSION_STATUS = OFFICIAL
+    else ifeq ($(NUCLEAR_BUILDTYPE), BETA)
+        NUCLEAR_VERSION_STATUS = BETA
+    else ifeq ($(NUCLEAR_BUILDTYPE), TEST)
+        NUCLEAR_VERSION_STATUS = TEST
+    else
+        NUCLEAR_VERSION_STATUS = UNOFFICIAL
+endif
+
 # NuclearVersion
 ROM_VERSION = 7.1.2
-ROM_VERSION_STATUS = OFFICIAL
+ROM_VERSION_STATUS = $(NUCLEAR_VERSION_STATUS)
 ROM_VERSION_MAINTENANCE = $(VER_ROM)
 ROM_POSTFIX := $(shell date +"%Y%m%d-%H%M")
 
