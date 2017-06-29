@@ -248,6 +248,7 @@ ifdef NUCLEAR_BUILDTYPE
     else
         NUCLEAR_VERSION_STATUS = UNOFFICIAL
 endif
+endif
 
 # NuclearVersion
 ROM_VERSION = 7.1.2
