@@ -299,4 +299,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/cm/config/partner_gms.mk
 -include vendor/cyngn/product.mk
 
+$(call inherit-product, vendor/cm/config/NucleaRom.mk)
 $(call prepend-product-if-exists, vendor/extra/product.mk)
