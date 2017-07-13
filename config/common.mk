@@ -135,12 +135,12 @@ PRODUCT_PACKAGES += \
     LockClock \
     OmniSwitch \
     ThemeInterfacer \
-    WallpaperPicker \
     WeatherProvider
 
 # Custom Nuclear packages
 PRODUCT_PACKAGES += \
-    Launcher3
+    Launcher3 \
+    NuclearPapers
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
