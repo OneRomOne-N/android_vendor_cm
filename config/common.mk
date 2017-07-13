@@ -133,11 +133,14 @@ PRODUCT_PACKAGES += \
     Jelly \
     LiveLockScreenService \
     LockClock \
-    Trebuchet \
     OmniSwitch \
     ThemeInterfacer \
     WallpaperPicker \
     WeatherProvider
+
+# Custom Nuclear packages
+PRODUCT_PACKAGES += \
+    Launcher3
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
